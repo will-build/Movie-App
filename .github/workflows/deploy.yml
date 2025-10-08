@@ -36,6 +36,9 @@ jobs:
           VITE_TMDB_API_BASE_URL: https://api.themoviedb.org/3
         run: npm run build
 
+      - name: Copy index.html to 404.html for SPA routing
+        run: cp dist/index.html dist/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
